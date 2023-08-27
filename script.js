@@ -3,6 +3,9 @@ const gridSizeSlider = document.getElementById("gridSize");
 const gridSizeValue = document.getElementById("gridSizeValue");
 const gridSizeValue2 = document.getElementById("gridSizeValue2");
 const resetButton = document.getElementById("resetButton");
+const penColorPicker = document.getElementById("penColor");
+const backgroundColorPicker = document.getElementById("backgroundColor");
+
 
 function createGrid(n) {
     container.innerHTML = ''; // Clear existing grid
@@ -27,5 +30,16 @@ resetButton.addEventListener('click', function() {
     gridSizeValue2.textContent = 16;
     createGrid(16);
 });
+
+penColorPicker.addEventListener('input', function() {
+});
+
+backgroundColorPicker.addEventListener('input', function() {
+    let cells = document.querySelectorAll('.grid-cell');
+    cells.forEach(cell => {
+        cell.style.backgroundColor = this.value;
+    });
+});
+
 
 createGrid(16);  // Initial grid
