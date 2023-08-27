@@ -14,27 +14,29 @@
 
 <div id="grid-container"></div>
 
-<div class="slider-container">
-    <label for="gridSize"><span id="gridSizeValue">16</span>x<span id="gridSizeValue2">16</span></label>
-    <input type="range" id="gridSize" min="1" max="50" value="16">
+<div class="controls-container">
+    <div class="slider-container">
+        <label for="gridSize"><span id="gridSizeValue">16</span>x<span id="gridSizeValue2">16</span></label>
+        <input type="range" id="gridSize" min="1" max="50" value="16">
+    </div>
 
     <div class="color-picker-wrapper">
         <div class="color-picker-container">
             <input type="color" id="penColor" value="#000000">
-            <label for="penColor">Pen Color</label>
+            <label for="penColor">pen colour</label>
         </div>
         <div class="color-picker-container">
             <input type="color" id="backgroundColor" value="#ffffff">
-            <label for="backgroundColor">Background Color</label>
+            <label for="backgroundColor">background colour</label>
         </div>
     </div>
 
     <div class="control-buttons">
-        <button id="undoButton">Undo</button>
-        <button id="redoButton">Redo</button>
+        <button id="undoButton">undo</button>
+        <button id="redoButton">redo</button>
     </div>
 
-    <button id="resetButton">Reset Sketchpad</button>
+    <button id="resetButton">reset sketchpad</button>
 </div>
 
 <script src="script.js"></script>
