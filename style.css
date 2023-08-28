@@ -170,3 +170,177 @@ input[type='range'] {
     width: 100%;  /* Adjust width as necessary */
     margin: 10px 0;  /* Add some space above and below the slider */
 }
+
+/* xs */
+@media (max-width: 640px) {
+    #grid-container {
+        width: 80vw;
+        height: 80vw;
+    }
+    
+    h1 {
+        font-size: 20px;
+        color: #fdfdfd;
+        text-align: center;
+        margin: 0;
+    }
+    
+    label {
+        color: #fdfdfd;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    button, .control-buttons button { /* Combined button styles */
+        padding: 2px 5px 4px;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        background-color: #EE4266;
+        color: #fdfdfd;
+        border-radius: 5px;
+        transition: background-color 0.1s;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    .control-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 8px; 
+        margin: 5px 0; 
+        padding: 0px 0px 0px;
+    }
+
+}
+
+/* m */
+@media (min-width: 760px) {
+    #grid-container {
+        width: 70vw;
+        height: 70vw;
+    }
+    
+    h1 {
+        font-size: 26px;
+        color: #fdfdfd;
+        text-align: center;
+        margin: 0;
+    }
+    
+    label {
+        color: #fdfdfd;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    button, .control-buttons button { /* Combined button styles */
+        padding: 2px 5px 4px;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        background-color: #EE4266;
+        color: #fdfdfd;
+        border-radius: 5px;
+        transition: background-color 0.1s;
+        font-size: 17px;
+        font-weight: 600;
+    }
+    
+    .control-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 8px; 
+        margin: 5px 0; 
+        padding: 0px 0px 0px;
+    }
+
+}
+
+/* l */
+@media (min-width: 1024px) {
+    #grid-container {
+        width: 400px;
+        height: 400px;
+    }
+
+    h1 {
+        font-size: 30px;
+        color: #fdfdfd;
+        text-align: center;
+        margin: 0;
+    }
+    
+    label {
+        color: #fdfdfd;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    button, .control-buttons button { /* Combined button styles */
+        padding: 4px 10px 8px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        background-color: #EE4266;
+        color: #fdfdfd;
+        border-radius: 5px;
+        transition: background-color 0.1s;
+        font-size: 17px;
+        font-weight: 600;
+    }
+    
+    .control-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 8px; 
+        margin: 5px 0; 
+        padding: 1px 0px 5px;
+    }
+
+}
+
+/* l */
+@media (min-width: 1536px) {
+    #grid-container {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    h1 {
+        font-size: 4em;
+        color: #fdfdfd;
+        text-align: center;
+        margin: 0;
+    }
+    
+    label {
+        color: #fdfdfd;
+        font-weight: bold;
+        font-size: 2.5em;
+    }
+
+    button, .control-buttons button { /* Combined button styles */
+        padding: 4px 10px 8px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        background-color: #EE4266;
+        color: #fdfdfd;
+        border-radius: 5px;
+        transition: background-color 0.1s;
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+    
+    .control-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 8px; 
+        margin: 5px 0; 
+        padding: 1px 0px 5px;
+    }
+
+}
+
+
