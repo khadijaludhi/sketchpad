@@ -19,13 +19,13 @@ function createGrid(n) {
     container.innerHTML = ''; // Remove any previously generated grid (and it's contents), instead it's set to an empty string.
     container.style.gridTemplateColumns = `repeat(${n}, 1fr)`; // Set grid columns,  it's specifying that there should be n columns of equal width (1fr each).
 
-// Initialization (let i = 0): 
-// Before the loop starts, a new variable i is created and initialized with the value 0. It helps track how many times the loop has run.
-// Condition (i < n * n):
-// This part checks whether the loop should continue running. In this case, the loop will keep running as long as the value of i is less than the result of n * n. 
-// Increment (i++):
-// After each run of the loop, the value of i is increased by 1. The i++ syntax is shorthand for i = i + 1. 
-// This increment ensures that the loop won't run indefinitely; i will eventually reach or exceed n * n, causing the loop to stop.
+    // Initialization (let i = 0): 
+    // Before the loop starts, a new variable i is created and initialized with the value 0. It helps track how many times the loop has run.
+    // Condition (i < n * n):
+    // This part checks whether the loop should continue running. In this case, the loop will keep running as long as the value of i is less than the result of n * n. 
+    // Increment (i++):
+    // After each run of the loop, the value of i is increased by 1. The i++ syntax is shorthand for i = i + 1. 
+    // This increment ensures that the loop won't run indefinitely; i will eventually reach or exceed n * n, causing the loop to stop.
     for (let i = 0; i < n * n; i++) {
         const cell = document.createElement("div");
         cell.classList.add("grid-cell"); //For each iteration of the loop, a new div element is created, representing an individual cell. 
@@ -45,6 +45,26 @@ function createGrid(n) {
                 event.target.setAttribute('painted', true);
             }
         });
+
+        // Event to handle starting a drawing for touch devices
+        cell.addEventListener('touchstart', function(event) {
+        event.preventDefault(); // prevent scroll or other default actions
+        isMousePressed = true;
+        event.target.style.backgroundColor = currentPenColor;
+        event.target.setAttribute('painted', true);
+        drawingSession = true;
+        });
+    
+        // Event to handle drawing continuation for touch devices
+        cell.addEventListener('touchmove', function(event) {
+        event.preventDefault(); // prevent scroll or other default actions
+        let touch = event.touches[0]; 
+        let target = document.elementFromPoint(touch.clientX, touch.clientY); 
+        if (isMousePressed && target && target.classList.contains('grid-cell')) {
+            target.style.backgroundColor = currentPenColor;
+            target.setAttribute('painted', true);
+        }
+         });
 
         container.appendChild(cell); // Add cell to the grid.
     }
@@ -164,6 +184,7 @@ document.addEventListener('mouseup', function() { // Mouse button is released
         saveStateToHistory();
     }
 });
+
 document.addEventListener('mouseleave', function() { // Triggered when mouse pointer leaves grid-container
     isMousePressed = false;
     if (drawingSession) {
@@ -175,6 +196,15 @@ document.addEventListener('mouseleave', function() { // Triggered when mouse poi
 // Prevent unwanted drag behavior.
 document.addEventListener('dragstart', function(event) { 
     event.preventDefault(); // This method stops the browser's default behavior for the 'dragstart' event - useful if the drawing grid includes elements that are draggable by default (the code ensures that the drawing experience remains uninterrupted and consistent).
+});
+
+// Events to handle end of drawing session for touch devices.
+document.addEventListener('touchend', function() {
+    isMousePressed = false;
+    if (drawingSession) {
+        drawingSession = false;
+        saveStateToHistory();
+    }
 });
 
 // Create initial grid and save its state.
