@@ -2,7 +2,7 @@
 
 **Play here:** [https://khadijaludhi.github.io/sketchpad/](https://khadijaludhi.github.io/sketchpad/)
 
-A vanilla JavaScript calculator created as part of The Odin Project.
+A JavaScript Etch-A-Sketch created as part of The Odin Project.
 
 Welcome to Sketchpad, a modern rendition of the classic Etch-a-Sketch game. This project allowed me to explore and strengthen my understanding of key web development concepts.
 
