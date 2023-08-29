@@ -33,4 +33,3 @@ Creating **Sketchpad** was a tremendous learning experience. Here's a breakdown 
 
 ## Conclusion
  With every line of code and design choice, I discovered the limitless possibilities and challenges that come with developing an interactive application. This project, while reminiscent of a classic toy, encapsulates my growth as a developer and stands as a beacon for future endeavors. To everyone who tries out **Sketchpad**, I hope you not only enjoy its functionality but also appreciate the passion and effort poured into it.
-
