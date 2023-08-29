@@ -1,4 +1,4 @@
-# sketchpad
+# Sketchpad
 
 Play here: (https://khadijaludhi.github.io/sketchpad/)
 
