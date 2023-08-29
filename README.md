@@ -1,14 +1,12 @@
 # Sketchpad
 
+## Introduction
+
 **Play here:** [https://khadijaludhi.github.io/sketchpad/](https://khadijaludhi.github.io/sketchpad/)
 
 A JavaScript Etch-A-Sketch created as part of The Odin Project.
 
 Welcome to Sketchpad, a modern rendition of the classic Etch-a-Sketch game. This project allowed me to explore and strengthen my understanding of key web development concepts.
-
-## Introduction
-
-Sketchpad is more than just a digital drawing board; it's a journey down memory lane, capturing the essence of Etch-a-Sketch with added functionality that enhances the user experience. It's designed for both those who loved the original and newcomers seeking a unique digital drawing experience.
 
 ## Features
 
