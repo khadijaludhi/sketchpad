@@ -1,6 +1,6 @@
 # Sketchpad
 
-**Play here:** [https://khadijaludhi.github.io/sketchpad/](https://khadijaludhi.github.io/sketchpad/)
+**Play here:** (https://khadijaludhi.github.io/sketchpad/)
 
 Welcome to Sketchpad, a modern rendition of the classic Etch-a-Sketch game. This project allowed me to explore and strengthen my understanding of key web development concepts.
 
